@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Metamorphous&display=swap");
+.about, .heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading h2 {
+  text-align: center;
+  color: white;
+  margin: 40px 0px;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -220px;
+  left: -40px;
+  width: 300%;
+  background: rgb(70, 145, 180);
+  transform: rotate(-3deg);
+  transform-origin: top;
+  height: 350px;
+}
+
+.about {
+  background-color: white;
+  box-shadow: 1px 1px 5px darkgray;
+  margin: 0px 300px;
+  padding: 20px;
+  z-index: 1;
+}
+
+:root {
+  font-family: "Crimson Text", serif;
+  word-spacing: 2px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  max-width: 100vw;
+}
+
+/*# sourceMappingURL=output.css.map */
