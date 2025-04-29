@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Metamorphous&display=swap');
+
+@mixin centerText {
+    text-align: center;
+}
+
+@mixin shadow {
+    background-color: white;
+    box-shadow: 1px 1px 5px darkgray;
+}
+
+%flexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+$primaryColor: rgb(70, 145, 180);
+$containerMargin: 0px 300px;
+
+.heading {
+    @extend %flexContainer;
+
+    h2 {
+        @include centerText;
+        color: white;
+        margin: 40px 0px;
+        z-index: 1;
+    }
+}   
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -220px;
+    left: -40px;
+    width: 300%;
+    background: $primaryColor;
+    transform: rotate(-3deg);
+    transform-origin:top;
+    height: 350px;
+  }
+
+
+.about {
+    @include shadow;    
+    @extend %flexContainer;
+    margin: $containerMargin;
+    padding: 20px;
+    z-index: 1;
+}
+
