@@ -1,0 +1,33 @@
+@media only screen and (max-width: 520px) {
+    :root {
+        font-size: 16px;
+    }
+    
+    footer div {
+        padding: 0px 20px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+
+    .project > img {
+        height: 250px;
+    }
+
+    .links img, .links a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .skills {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    p {
+        text-align: left !important;
+        text-align-last: left;
+        font-size: 14px !important;
+    }
+}
