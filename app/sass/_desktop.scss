@@ -9,7 +9,7 @@
 }
 
 @mixin hrAfter {
-    background-color: white;
+    background-color: aliceblue;
     position: relative;
     top: -28px;
     padding: 0px 7px;
@@ -115,8 +115,13 @@ body::before {
 }
 
 .skills {
+    @include shadow;
     display: flex;
     justify-content: space-around;
+    margin-top: 40px;
+    padding: 25px;
+    padding-bottom: 50px;
+    background-color: white;
 
     h2 {
         @include normalFontWeight;
@@ -125,9 +130,65 @@ body::before {
 
 .projects {
     display: grid;
-    margin: 40px 60px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: min-content;
-    grid-auto-columns: min-content;
+    margin: 60px 200px;
+    gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project {
+    @extend %flexColumn;
+    @include shadow;
+    background-color: white;
+
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: fill;
+    }
+
+    p {
+        margin: 0px;
+        text-align: justify;
+        font-size: 18px;
+        padding: 0px 20px 20px;
+    }
+}
+
+.title {
+    display: flex;
+    margin: 0px 20px;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    img, a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.warning {
+    margin-top: 40px;
+}
+
+footer {
+    @include shadow;
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primaryColor;
+    height: 150px;
+    margin-top: 40px;
+
+    a:link, a:visited {
+        color: white;
+    }
 }
