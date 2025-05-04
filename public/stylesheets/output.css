@@ -1,7 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Metamorphous&display=swap");
-.about, .heading {
+.project, .container, .about, .heading, ul {
   display: flex;
   flex-direction: column;
+}
+
+:root {
+  font-size: 20px;
+}
+
+hr {
+  text-align: center;
+  border: none;
+  border-top: 1px solid rgb(95, 95, 95);
+  overflow: visible;
+  margin: 0px 70px;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+ul li {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
 }
 
 .heading h2 {
@@ -12,6 +39,7 @@
 }
 
 body::before {
+  box-shadow: 1px 1px 5px darkgray;
   content: "";
   position: absolute;
   top: -220px;
@@ -24,22 +52,184 @@ body::before {
 }
 
 .about {
-  background-color: white;
   box-shadow: 1px 1px 5px darkgray;
   margin: 0px 300px;
-  padding: 20px;
+  background-color: white;
+  padding: 20px 30px;
   z-index: 1;
+  text-align: justify;
+  text-align-last: center;
+}
+.about h1 {
+  text-align: center;
 }
 
+.container {
+  margin: 0px 300px;
+  margin-top: 130px;
+}
+.container .header1::after {
+  background-color: aliceblue;
+  position: relative;
+  top: -28px;
+  padding: 0px 7px;
+  font-size: 2rem;
+  content: "My Tech Stack";
+}
+.container .header2::after {
+  background-color: aliceblue;
+  position: relative;
+  top: -28px;
+  padding: 0px 7px;
+  font-size: 2rem;
+  content: "My Projects";
+}
+
+.skills {
+  box-shadow: 1px 1px 5px darkgray;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  column-gap: 30px;
+  padding: 25px;
+  padding-bottom: 50px;
+  background-color: white;
+}
+.skills h2 {
+  font-weight: normal;
+}
+
+.projects {
+  display: grid;
+  margin: 60px 200px;
+  gap: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project {
+  box-shadow: 1px 1px 5px darkgray;
+  background-color: white;
+}
+.project img {
+  width: 100%;
+  height: 400px;
+  object-fit: fill;
+}
+.project p {
+  margin: 0px;
+  text-align: justify;
+  font-size: 18px;
+  padding: 0px 20px 20px;
+}
+
+.title {
+  display: flex;
+  margin: 0px 20px;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  margin-left: 20px;
+}
+.links img, .links a {
+  width: 30px;
+  height: 30px;
+}
+
+.warning {
+  margin-top: 40px;
+}
+
+footer {
+  box-shadow: 1px 1px 5px darkgray;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(70, 145, 180);
+  height: 150px;
+  margin-top: 40px;
+  float: left;
+}
+footer a:link, footer a:visited {
+  color: white;
+}
+
+@media only screen and (max-width: 1025px) {
+  .about {
+    margin: 0px 50px;
+  }
+  .container {
+    margin: 100px 50px 0px;
+  }
+  .projects {
+    margin: 0px 40px 60px;
+  }
+  .skills {
+    margin-top: 0px;
+  }
+  .warning {
+    margin: 0px 0px 40px;
+  }
+  ul {
+    padding: 0px;
+  }
+  hr {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  :root {
+    font-size: 16px;
+  }
+  footer div {
+    padding: 0px 20px;
+  }
+  .projects {
+    grid-template-columns: repeat(auto-fit, 100%);
+  }
+  .project > img {
+    height: 250px;
+  }
+  .links img, .links a {
+    width: 25px;
+    height: 25px;
+  }
+  .skills {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  p {
+    text-align: left !important;
+    text-align-last: left;
+    font-size: 14px !important;
+  }
+  .about p {
+    text-align: center !important;
+    text-align-last: center !important;
+  }
+}
 :root {
   font-family: "Crimson Text", serif;
   word-spacing: 2px;
   overflow-x: hidden;
+  background-color: aliceblue;
 }
 
 body {
+  position: relative;
+  overflow: hidden;
   margin: 0;
   max-width: 100vw;
+}
+
+footer {
+  position: relative;
 }
 
 /*# sourceMappingURL=output.css.map */
