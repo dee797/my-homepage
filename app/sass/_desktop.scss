@@ -24,7 +24,7 @@
 }
 
 $primaryColor: rgb(70, 145, 180);
-$containerMargin: 0px 300px;
+$containerMargin: 0px 200px;
 
 
 :root {
@@ -84,7 +84,7 @@ body::before {
 .about {
     @include shadow;    
     @extend %flexColumn;
-    margin: $containerMargin;
+    margin: 0px 150px;
     background-color: white;
     padding: 20px 30px;
     z-index: 1;
